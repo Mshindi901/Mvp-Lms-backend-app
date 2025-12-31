@@ -9,6 +9,7 @@ import quizAttemptRoutes from './src/Routes/Course-Routes/quizAttempt.routes.js'
 import LessonRoutes from './src/Routes/Course-Routes/lesson.routes.js';
 import QuizRoutes from './src/Routes/Course-Routes/quiz.routes.js';
 import QuestionRoutes from './src/Routes/Course-Routes/question.routes.js';
+import NotesRoutes from  './src/Routes/Course-Routes/Notes.routes.js';
 
 const app = express();
 app.use(cors());
@@ -22,6 +23,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 
 app.use('/api/lessons', LessonRoutes);
+
+app.use('/api/notes', NotesRoutes);
 
 app.use('/api/quizzes', QuizRoutes);
 
