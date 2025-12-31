@@ -7,6 +7,7 @@ import authRoutes from './src/Routes/Auth-Routes/auth.routes.js';
 import courseRoutes from './src/Routes/Course-Routes/course.routes.js';
 import quizAttemptRoutes from './src/Routes/Course-Routes/quizAttempt.routes.js';
 import LessonRoutes from './src/Routes/Course-Routes/lesson.routes.js';
+import LessonProgressRoutes from './src/Routes/Course-Routes/progress.routes.js';
 import QuizRoutes from './src/Routes/Course-Routes/quiz.routes.js';
 import QuestionRoutes from './src/Routes/Course-Routes/question.routes.js';
 import NotesRoutes from  './src/Routes/Course-Routes/Notes.routes.js';
@@ -23,6 +24,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 
 app.use('/api/lessons', LessonRoutes);
+
+app.use('/api/lesson-progress', LessonProgressRoutes);
 
 app.use('/api/notes', NotesRoutes);
 
