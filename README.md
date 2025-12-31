@@ -1,35 +1,69 @@
-# LMS Backend
+# 🎓 MVP LMS Backend (Node.js + Sequelize)
 
-## Overview
-This is the **backend for a modern Learning Management System (LMS)** built with **Node.js, Express, and Sequelize**. It provides API endpoints for admin and student management, courses, lessons, quizzes, and authentication using JWT. The backend is designed as an **MVP** and can be expanded with additional features like file storage, analytics, and more.
+A **production-ready MVP backend for a Learning Management System (LMS)** built with **Node.js, Express, Sequelize ORM**, and **PostgreSQL/MySQL**.
 
----
-
-## Features (MVP)
-- Admin authentication and management
-- Student registration and login
-- CRUD operations for lessons and courses
-- Quizzes with questions and scoring
-- JWT-based authentication
-- PostgreSQL database with Sequelize ORM
-- Appwrite integration for file storage (optional)
+This repository is designed for **junior developers** who want a solid backend foundation to build, learn, and extend an LMS MVP.
 
 ---
 
-## Tech Stack
-- Node.js (v24+)
+## 🚀 Features
+
+### ✅ Authentication & Users
+- User registration & login
+- Role-based access control (Admin / Instructor / Student)
+- JWT authentication
+
+### 📚 Courses & Lessons
+- Create and manage courses
+- Create lessons under courses
+- Ordered lessons for structured learning
+
+### 📈 Lesson Progress Tracking
+- Track lesson status (`not_started`, `in_progress`, `completed`)
+- Track lesson completion percentage
+- Resume learning from last lesson
+- Course progress calculation
+
+### 📝 Notes & Downloads
+- Upload lesson notes (PDF, DOCX, etc.)
+- Download notes per lesson
+- Secure file handling
+
+### ▶ Continue Learning
+- Automatically resumes from last incomplete lesson
+- Stores last accessed lesson per user
+
+### 🧱 Clean Architecture
+- MVC-inspired structure
+- Sequelize migrations & models
+- Centralized error handling
+- Environment-based configuration
+
+---
+
+## 🧠 Tech Stack
+
+- Node.js
 - Express.js
 - Sequelize ORM
-- PostgreSQL
-- Appwrite (for storage)
-- JSON Web Tokens (JWT) for authentication
-- Multer for file uploads
+- PostgreSQL / MySQL
+- JWT Authentication
+- Multer (File uploads)
+- dotenv
 
 ---
 
-## Getting Started
+## 📁 Project Structure
 
-### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/lms-backend.git
-cd lms-backend
+src/
+│
+├── config/          # Database & environment config
+├── controllers/     # Route logic
+├── models/          # Sequelize models
+├── migrations/      # Database migrations
+├── routes/          # API routes
+├── middlewares/     # Auth & error handling
+├── services/        # Business logic
+├── utils/           # Helper functions
+└── app.js           # App entry point
